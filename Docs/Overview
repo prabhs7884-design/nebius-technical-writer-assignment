@@ -1,0 +1,33 @@
+---
+title: Overview
+---
+
+# Creating Managed Kubernetes Cluster in Nebius AI Cloud with High Availability
+Nebius AI Cloud offers Managed Service for Kubernetes, which simplifies cluster deployment and management for Kubernetes. In this section, you will learn how to create a managed Kubernetes cluster in Nebius AI Cloud with **High Availability** feature enabled.
+
+## What is High Availability?
+
+At the core of every Managed Kubernetes cluster is `etcd`, a consistent key-value database that records all cluster configuration metadata and state data. 
+
+**Default Behavior (Highly Available):** By default, Nebius provisions your control plane with **three `etcd` stores** instead of one. This multi-node configuration uses a distributed consensus mechanism to ensure that your cluster state data remains entirely accessible even if an underlying hardware failure knocks an instance offline.
+
+**Non-HA Behavior:** If you disable the high availability option, your cluster is provisioned with a single **`etcd`** store. 
+
+### Why Enable High Availability?
+
+1. **Fault Tolerance:** The cluster API server stays operational despite the failure of an underlying control plane instance.
+2. **Seamless Upgrades:** Manual control plane version upgrades require component restarts. If your control plane has only a single `etcd` store, the cluster management API becomes entirely unavailable during updates. A highly available control plane stays online throughout the upgrade sequence.
+3. **Zero Financial Impact:** Enabling high availability increases structural reliability but **does not affect the cost** of the cluster.
+
+The High availability setting is immutable once selected and must be declared exclusively during the initial cluster creation stage.
+
+## Understanding Control Plane High Availability
+
+When setting up your cluster, the **High availability** option determines how resilient the "brain" (Control plane) of your cluster will be against unexpected system failures or routine cloud maintenance.
+
+* **High Availability Enabled (Default & Recommended):** Nebius automatically configures your control plane to run **three replicated `etcd` database stores** instead of a single standalone node. Using a distributed consensus model, your management layer stays completely online and accessible even if an underlying server experiences a hardware crash or goes through a system version upgrade.
+* **High Availability Disabled:** The control plane relies on a single `etcd` store. If that instance experiences a disruption or restarts during a cluster version update, you temporarily lose the ability to manage, scale, or interact with your application workloads.
+
+> 💡 **Cost Efficiency Note:** Activating High availability maximizes your cluster's operational safety and reliability, but it **does not alter the cost** of your cluster.
+
+---

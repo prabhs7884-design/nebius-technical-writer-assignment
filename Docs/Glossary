@@ -1,0 +1,14 @@
+---
+title: Glossary
+---
+
+Here are a few essential concepts to help you understand this feature:
+- **Kubernetes Cluster**: A Kubernetes Cluster is a fully functional deployment environment that comprises of control plane and a set of worker nodes.
+- **Control Plane** The Control Plane manages the worker nodes and the pods in the cluster. It handles orchestrating tasks, scheduling application workloads, and keeping the system running smoothly.
+- **Worker node(s)**: Worker nodes run the containerized applications and host the pods that are the components of the application.
+- **Key-Value Store (etcd)**: Kubernetes utilizes a key-value store named etcd inside its control plane. etcd is a consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.
+- **High-availability (HA)**: HA in Kubernetes is a cluster architecture designed to elimate single points of failure.
+-*Without HA (Single Point of Failure)*: The cluster runs only one instance of the etcd key-value store. If the server hosting it crashes, the entire cluster management layer locks up.  
+With HA (High Availability): Nebius duplicates that database across three separate instances. If one database server encounters a hardware fault or goes offline for a version upgrade, the remaining two servers instantly form a majority, take over, and keep your management tools running perfectly without any downtime.
+- **Network**: A logically isolated, software-defined network space within a cloud enviornment, allowing cloud resources to securely connect and communicate with each other over private, IP addresses.
+- **Subnet**: Subnets are used to break a large virtual network down into smaller, manageable, and isolated sections for better organization, traffic routing, and security.
