@@ -10,21 +10,21 @@ The High Availability feature must be configured during the cluster creation pro
 2. Navigate to the cluster creation wizard. 
 **Create Managed Kubernetes Cluster** page opens.
  ![Nebius AI Cluster Creation Form](Images/cluster-form.png)
- 3. Enter a cluster **Name** (e.g., `blue-roundworm-cluster-2`) 
+3. Enter a cluster **Name** (e.g., `blue-roundworm-cluster-2`). 
 4. In **Labels**, add identifiers if required.
-4. Configure your **Control plane**.
+5. Configure your **Control plane**.
 
-**To enable HA feature:**
+    **To enable HA feature:**
 
-a. Keep the **High availability** switch toggled ON (it is enabled by default). 
+    a. Keep the **High availability** switch toggled ON (it is enabled by default). 
 
-b. Select your desired **Kubernetes version** (e.g., `1.33`) from the drop-down menu.
-c. Choose whether to **Enable** a **Public endpoint** to securely access your cluster via the open internet by using the toggle switch ON or OFF.
+    b. Select your desired **Kubernetes version** (e.g., `1.33`) from the drop-down menu.
+    c. Choose whether to **Enable** a **Public endpoint** to securely access your cluster via the open internet by using the toggle switch ON or OFF.
 
-**To disable HA feature:**
+    **To disable HA feature:**
 
-a. Check if the **High availability** switch is enabled by default. If enabled, toggle the switch OFF to disable HA.
+    a. Check if the **High availability** switch is enabled by default. If enabled, toggle the switch OFF to disable HA.
 
-5. In the **Network** section, select your destination infrastructure. You can select the pre-configured **`default-network`** and **`default-subnet`**.
-6. Review your details and click **Create cluster**.
+6. In the **Network** section, select your destination infrastructure. You can select the pre-configured **`default-network`** and **`default-subnet`**.
+7. Review your details and click **Create cluster**.
 
