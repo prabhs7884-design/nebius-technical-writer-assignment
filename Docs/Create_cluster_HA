@@ -17,7 +17,6 @@ The High Availability feature must be configured during the cluster creation pro
     **To enable HA feature:**
 
     a. Keep the **High availability** switch toggled ON (it is enabled by default). 
-
     b. Select your desired **Kubernetes version** (e.g., `1.33`) from the drop-down menu.
     c. Choose whether to **Enable** a **Public endpoint** to securely access your cluster via the open internet by using the toggle switch ON or OFF.
 
