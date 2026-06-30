@@ -8,14 +8,14 @@ This section explains how a managed Kubernetes cluster in Nebius AI Cloud operat
 
 ## What is High Availability?
 
-**High Availability (HA)** helps prevent downtime, ensuring your system keeps running even if some parts fail. Nebius AI Cloud provides an HA option for its Managed Kubernetes clusters, ensuring control plane stays active and can handle unexpected failures.
+**High Availability (HA)** helps prevent downtime, ensuring your system keeps running even if some parts fail. Nebius AI Cloud provides an HA option for its Managed Kubernetes clusters, ensuring the control plane stays active and can handle unexpected failures.
 
-While, a Kubernetes cluster runs its control plane, including the `etcd` key-value store, on a single node, Nebius enables HA by default. This means Nebius automatically provisions the control plane to use multiple `etcd` nodes.
+While a Kubernetes cluster runs its control plane, including the `etcd` key-value store, on a single node, Nebius enables HA by default. This means Nebius automatically provisions the control plane to use multiple `etcd` nodes.
 
 ## Why enable High Availability?
 
 - Using multiple nodes ensures the cluster keeps running continuously even if an individual node fails.
-- When you manually upgrade a control plane version, some components must restart. If your control plane depends on a single node, the management tools becomes unavailable during the upgrade. However, an HA-enabled control plane stays online and accessible throughout the entire upgrade.
+- When you manually upgrade a control plane version, some components must restart. If your control plane depends on a single node, the management tools become unavailable during the upgrade. However, an HA-enabled control plane stays online and accessible throughout the entire upgrade.
 - High availability increases structural reliability but does not affect the cost of the cluster.
 
 ## What happens when High Availability is disabled?

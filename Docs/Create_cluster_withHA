@@ -8,8 +8,9 @@ The High Availability feature must be configured during the cluster creation pro
 
 1. Log into the **Nebius AI Cloud Console**.
 2. Navigate to the cluster creation wizard. 
-**Create Managed Kubernetes Cluster** page opens. 
-3. Enter a cluster **Name** (e.g., `blue-roundworm-cluster-2`) 
+**Create Managed Kubernetes Cluster** page opens.
+ ![Nebius AI Cluster Creation Form](Images/cluster-form.png)
+ 3. Enter a cluster **Name** (e.g., `blue-roundworm-cluster-2`) 
 4. In **Labels**, add identifiers if required.
 4. Configure your **Control plane**.
 
