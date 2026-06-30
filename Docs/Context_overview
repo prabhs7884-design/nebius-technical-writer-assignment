@@ -20,4 +20,4 @@ While a Kubernetes cluster runs its control plane, including the `etcd` key-valu
 
 ## What happens when High Availability is disabled?
 
-The control plane uses a single node. If that node fails or restarts during a cluster update, you will temporarily lose the ability to manage or scale your application workloads.
+If HA is disabled, the control plane uses a single node. If that node fails or restarts during a cluster update, you will temporarily lose the ability to manage, scale, or interact with your application workloads.
