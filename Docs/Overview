@@ -3,21 +3,21 @@ title: Overview
 ---
 
 # Nebius AI’s Managed Kubernetes Cluster with High Availability 
-Nebius AI Cloud offers a managed service for Kubernetes, making it easier to set up and manage clusters.
-This section explains how a managed Kubernetes cluster in Nebius AI Cloud works when the High Availability feature is turned on.
+Nebius AI Cloud offers a managed service for Kubernetes, making it easier to deploy and manage clusters.
+This section explains how a managed Kubernetes cluster in Nebius AI Cloud operators when High Availability is enabled.
 
 ## What is High Availability?
 
-**High Availability (HA)** helps prevent downtime ensuring the system keeps running although some parts fail. Nebius AI Cloud has a high-availability option for its Managed Kubernetes clusters, where the cluster runs its control plane across multiple nodes instead of one, ensuring control plane stays active and can handle unexpected failures.
+**High Availability (HA)** helps prevent downtime, ensuring your system keeps running even if some parts fail. Nebius AI Cloud provides an HA option for its Managed Kubernetes clusters, ensuring control plane stays active and can handle unexpected failures.
 
-By default, a Kubernetes cluster runs its control plane, including a key-value store named `etcd`, on just one master node. However, since HA is enabled by default, Nebius automatically provisions your control plane to use multiple `etcd` nodes instead of a single node.
+While, a Kubernetes cluster runs its control plane, including the `etcd` key-value store, on a single node, Nebius enables HA by default. This means Nebius automatically provisions the control plane to use multiple `etcd` nodes.
 
 ## Why enable High Availability?
 
-- Using multiple nodes for the key-value store ensures that cluster operates safe and continuous although one node goes down.
-- When you manually upgrade a control plane version, you need to restart some parts of the components. If your control plane has a single node, then the cluster's management tools becomes unavailable during the upgrade. But, a HA control plane stays online and accessible during the entire upgrade.
+- Using multiple nodes ensures the cluster keeps running continuously even if an individual node fails.
+- When you manually upgrade a control plane version, some components must restart. If your control plane depends on a single node, the management tools becomes unavailable during the upgrade. However, an HA-enabled control plane stays online and accessible throughout the entire upgrade.
 - High availability increases structural reliability but does not affect the cost of the cluster.
 
 ## What happens when High Availability is disabled?
 
-The control plane uses a single node. If that node fails or restarts during a cluster update, you might temporarily lose the ability to manage, scale, or interact with your application workloads.
+The control plane uses a single node. If that node fails or restarts during a cluster update, you will temporarily lose the ability to manage or scale your application workloads.
